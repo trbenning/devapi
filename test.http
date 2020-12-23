@@ -1,3 +1,20 @@
-GET https://localhost:8001/datetime HTTP/1.1
+@scheme = http
+@port = 8000
+
+### Get host datetime in ISO-8601 format
+GET {{scheme}}://localhost:{{port}}/datetime HTTP/1.1
 
 Accept: text/plain
+
+### Get WAN IP
+GET {{scheme}}://localhost:{{port}}/host/ip-wan HTTP/1.1
+
+Accept: text/plain
+
+### Get Local IP
+GET {{scheme}}://localhost:{{port}}/host/ip-lan HTTP/1.1
+
+Accept: text/plain
+
+### Get Hostname
+GET {{scheme}}://localhost:{{port}}/host HTTP/1.1

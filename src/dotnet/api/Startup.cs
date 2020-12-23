@@ -41,12 +41,10 @@ namespace Benning.Dev.Api
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Benning.Dev.Api v1"));
             }
 
-            app.UseHttpsRedirection();
+            //app.UseHttpsRedirection();
+            //app.UseAuthorization();
 
             app.UseRouting();
-
-            app.UseAuthorization();
-
             app.UseEndpoints(endpoints => endpoints.MapControllers());
         }
     }
